@@ -13,6 +13,7 @@ export default function EditableImage({link, setLink}) {
         method: 'POST',
         body: data,
       }).then(response => {
+        console.log("mehmet",response)
         if (response.ok) {
           return response.json().then(link => {
             setLink(link);
